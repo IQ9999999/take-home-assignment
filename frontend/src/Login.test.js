@@ -6,7 +6,6 @@ test("submitting the form calls onSignIn with username and password", () => {
   render(<Login onSignIn={onSignIn} />);
   fireEvent.change(screen.getByLabelText(/Username:/i), { target: { value: "testuser" } });
   fireEvent.change(screen.getByLabelText(/Password:/i), { target: { value: "testpass" } });
-  fireEvent.click(screen.getByText(/Login/i));
-
+  fireEvent.click(screen.getByRole("button", { name: /Login/i }));
   expect(onSignIn).toHaveBeenCalledWith("testuser", "testpass");
 });
