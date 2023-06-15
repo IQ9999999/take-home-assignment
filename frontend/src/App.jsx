@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Registration from "./register";
-import Login from "./login";
-import Landing from "./landing";
+import Registration from "./Register";
+import Login from "./Login";
+import Landing from "./Landing";
 
 export default function App() {
   const [username, setUsername] = useState(null);
