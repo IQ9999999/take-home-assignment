@@ -22,7 +22,7 @@ export default function Login({ onSignIn }) {
           <input type="password" onChange={(event) => setPassword(event.target.value)} />
         </label>
         <br />
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" className="button" />
       </form>
     </div>
   );

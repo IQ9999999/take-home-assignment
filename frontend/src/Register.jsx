@@ -22,7 +22,7 @@ export default function Registration({ onRegister }) {
           <input type="password" onChange={(event) => setPassword(event.target.value)} />
         </label>
         <br />
-        <input type="submit" value="Register" />
+        <input type="submit" value="Register" className="button" />
       </form>
     </div>
   );

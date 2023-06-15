@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Registration from "./Register";
 import Login from "./Login";
 import Landing from "./Landing";
+import "./App.css";
 
 export default function App() {
   const [username, setUsername] = useState(null);
@@ -37,12 +38,14 @@ export default function App() {
 
   if (!isLoggedIn) {
     return (
-      <div>
+      <div className="container">
         <h1>Please {view === "register" ? "Register" : "Sign In"}</h1>
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
         {view === "register" ? <Registration onRegister={handleRegister} /> : <Login onSignIn={handleSignIn} />}
         <br />
-        <button onClick={toggleView}>Switch to {view === "register" ? "Sign In" : "Register"}</button>
+        <button className="switch-button" onClick={toggleView}>
+          Switch to {view === "register" ? "Sign In" : "Register"}
+        </button>
       </div>
     );
   }
